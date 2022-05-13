@@ -3,8 +3,8 @@ body {
 }
 
 header {
-    background: #bbbbbb;
-    padding: 20px;
+    background: #BBBBBB;
+    padding: 20px 0;
 }
 
 .caixa {
@@ -26,21 +26,21 @@ nav li {
 
 nav a {
     text-transform: uppercase;
-    color: black;
+    color: #000000;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: #c78c79;
+    color: #C78C19;
     text-decoration: underline;
 }
 
 .produtos {
     width: 940px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .produtos li {
@@ -56,11 +56,11 @@ nav a:hover {
 }
 
 .produtos li:hover {
-    color: #c78c19;
+    border-color: #C78C19;
 }
 
 .produtos li:active {
-    border-color: #088c19;
+    border-color: #088C19;
 }
 
 .produtos li:hover h2 {
@@ -85,22 +85,19 @@ nav a:hover {
 footer {
     text-align: center;
     background: url("bg.jpg");
-    padding: 40px 0px;
+    padding: 40px 0;
 }
 
 .copyright {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 13px;
-    margin: 20px;
+    margin: 20px 0 0;
 }
 
-main {
-    width: 940px;
-    margin: 40px 0 0 30px;
-}
+main {}
 
 form {
-    margin: 40px 0 0 0;
+    margin: 40px 0;
 }
 
 form label,
@@ -128,23 +125,24 @@ form legend {
     color: white;
     font-weight: bold;
     font-size: 18px;
+    border: none;
     border-radius: 5px;
     transition: 1s all;
     cursor: pointer;
 }
 
 .enviar:hover {
-    background: red;
+    background: darkorange;
     transform: scale(1.2);
 }
 
 table {
-    margin: 20px 10px;
+    margin: 20px 0 40px;
 }
 
 thead {
     background: #555555;
-    color: #ffffff;
+    color: white;
     font-weight: bold;
 }
 
@@ -155,7 +153,7 @@ th {
 }
 
 
-/* css da pagina inicial  */
+/* css da página inicial */
 
 .banner {
     width: 100%;
@@ -168,39 +166,27 @@ th {
     clear: left;
 }
 
-.principal {
-    padding: 3em 0;
-    background: #fefefe;
-    width: 940px;
-    margin: 0 auto;
+.titulo-principal::before {
+    content: "[";
 }
 
-.titulo-principal:first-letter {
-    font-weight: bold;
+.titulo-principal::after {
+    content: "]";
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p {
     margin: 0 0 1em;
 }
 
-p:first-line {
-    font-style: italic;
-}
-
 .principal strong {
     font-weight: bold;
-}
-
-.titulo-principal:before {
-    content: "[";
-}
-
-.titulo-principal:after {
-    content: "]"
-}
-
-.itens:before {
-    content: "⭐"
 }
 
 .principal em {
@@ -215,9 +201,7 @@ p:first-line {
 
 .mapa {
     padding: 3em 0;
-    background: linear-gradient(#fefefe, #888888);
-    width: 940px;
-    margin: 0 auto;
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa-conteudo {
@@ -240,10 +224,6 @@ p:first-line {
     margin: 0 auto;
 }
 
-.imagem-beneficios {
-    width: 60%;
-}
-
 .lista-beneficios {
     width: 40%;
     display: inline-block;
@@ -254,12 +234,23 @@ p:first-line {
     line-height: 1.5;
 }
 
-.itens:nth-child(1) {
+.itens:first-child {
     font-weight: bold;
+}
+
+.itens:before {
+    content: "🟊";
 }
 
 .imagem-beneficios {
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
 }
 
 .video {
